@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Home</title>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type = "text/css" href= "static/css/style.css">
+		<style>
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: darkolivegreen;
+			  position: -webkit-sticky; /* Safari */
+			  position: sticky;
+			  top: 0;
+			}
+
+			li {
+			  float: left;
+			}
+
+			li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+
+			li a:hover {
+			  background-color: #111;
+			}
+
+			.active {
+			  background-color: #111;
+			}
+			.box1 {
+				  width: 150px;
+				  padding: 10px;
+				  border: 3px solid darkolivegreen;
+				  border-radius: 15%;
+				  margin: 10;
+				}
+	    	.text-container {
+	    		display: inline-block;
+	    		border: 3px solid darkolivegreen;
+	    		padding: 10px;
+	    	}
+			
+			.profile {
+				border-radius: 50%;
+		        border: 3px solid darkolivegreen;
+		        margin: auto;
+				padding: 5px;
+				width: 100px;
+				height: 120px;
+			}
+			        @font-face {
+            font-family: 'YourCursiveFont';
+            src: url('path/to/your-cursive-font.ttf') format('truetype');
+        }
+
+        .txt {
+            text-align: center;
+            font-family: 'YourCursiveFont', cursive;
+        }
+
+        /* Add a small pen icon to the h2 element */
+        .txt h2:before {
+            content: "\270E "; /* Unicode character for pen icon */
+            font-size: 14px;
+            margin-right: 5px;
+        }
+
+		</style>
+	</head>
+	<body>
+		<h1 class = 'text-container'>Welcome {{dict['username']}}</h1>
+		<br>
+			<ul>
+			  <li><a class="active" href="/home">Home</a></li>
+			  <li><a href="/explore">Explore</a></li>
+			  <li><a href="/add">Journal</a></li>
+			  <li><a href="/signout">Sign out</a></li>
+			</ul>
+			<br>
+		<div class = 'box1'>
+			<img class = "profile" src="https://i.pinimg.com/474x/5e/89/f6/5e89f6cc626bc0486d30d4573922dc0f.jpg">
+			<p><strong>Name:</strong> {{dict['name']}}</p>
+			<p><strong>Bio: </strong>{{dict['bio']}}</p>
+		</div>
+		<div class = "txt">
+			<h1>Have you added anything today?</h1>
+			<h2>Make sure to keep documenting!</h2>
+		</div>
+	</body>
+</html>

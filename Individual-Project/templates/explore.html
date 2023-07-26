@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ 	<meta charset="UTF-8">
+ 	<title>Explore</title>
+	<link rel="stylesheet" type = "text/css" href= "static/css/style.css">
+	<style>
+					ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: darkolivegreen;
+			  position: -webkit-sticky; /* Safari */
+			  position: sticky;
+			  top: 0;
+			}
+
+			li {
+			  float: left;
+			}
+
+			li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+
+			li a:hover {
+			  background-color: #111;
+			}
+
+			.active {
+			  background-color: #111;
+			}
+			.box1 {
+				  width: 150px;
+				  padding: 10px;
+				  border: 3px solid darkolivegreen;
+				  border-radius: 15%;
+				  margin: 10;
+				}
+	    	.text-container {
+	    		display: inline-block;
+	    		border: 3px solid darkolivegreen;
+	    		border-radius: round;
+	    		padding: 10px;
+	    	}
+			
+			.profile {
+				border-radius: 50%;
+		        border: 3px solid darkolivegreen;
+		        margin: auto;
+				padding: 5px;
+				width: 100px;
+				height: 120px;
+			}
+			img {
+				border: 3px solid darkolivegreen;
+				padding: 5px;
+				max-width: 100%;
+	    	height: auto;
+
+			}
+			.img_place {
+
+			}
+				    	}
+	    	.container {
+	    		display: flex;
+
+	    	}
+	    	.blank-column {
+	    		flex: 1;
+	    		min-height: 100vh; /* Set minimum height to fill 
+	    		the page */
+	    		float: left;
+	    	}
+	    	.column {
+	    		flex: 2;
+	    		padding: 20px;
+	    		float: left;
+	    	}
+	    	.column img {
+	    		max-width: 100%;
+	    		display: block;
+	    		margin-bottom: 20px;
+	    	}
+	</style>
+</head>
+<body>
+		<h1 class = 'text-container'>Exploring for {{dict['username']}}</h1>
+		<br>
+			<ul>
+			  <li><a href="/home">Home</a></li>
+			  <li><a class = "active" href="/explore">Explore</a></li>
+			  <li><a href="/add">Journal</a></li>
+			  <li><a href="/signout">Sign out</a></li>
+			</ul>
+
+		<div class="container">
+			<div class="blank-column"></div>
+			<div class="column">
+				<img src="https://m.media-amazon.com/images/I/71PMj7T5hLL.jpg">
+				<img src="https://vanillapapers.net/wp-content/uploads/2022/03/journal-6.jpg">
+				<!-- Add more images here -->
+			</div>
+			<div class="column">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAhgWKbwLSVg1ZJcQ4HRHE2c81mf6kqGGAXw&usqp=CAU">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMQdJJe2uCADwz9fp3FR40FDDBNaHj1igQyg&usqp=CAU">
+				<!-- Add more images here -->
+			</div>
+		</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Welcome</title>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0;
+			}
+
+			/* Center the typewriter text horizontally and initially align it in the center */
+			#write {
+				text-align: center;
+				display: inline-block;
+				padding-right: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="login-page">
+			<div class="form">
+					<h1>Welcome!</h1>
+					<h3>New user? Signup</h3>
+					<a href="/login"><button>login</button></a>
+					<br>
+					<h3>Already have an account? Login</h3>
+					<a href="/signup"><button>signup</button></a>
+			</div>
+		</div>
+		<h1 id="write"></h1>
+
+
+		<script>
+			var i = 0;
+			var txt = 'Welcome to your online journal, document every special moment and day \n your life deserves to be stored';
+			var speed = 75;
+
+			function typeWriter() {
+				if (i < txt.length) {
+					var currentChar = txt.charAt(i);
+					if (currentChar === '\n') {
+						document.getElementById("write").innerHTML += '<br>';
+					} else {
+						document.getElementById("write").innerHTML += currentChar;
+					}
+					i++;
+					setTimeout(typeWriter, speed);
+				}
+			}
+
+			// Call the typewriter function when the page loads
+			window.onload = function () {
+				typeWriter();
+			};
+		</script>
+	</body>
+</html>
